@@ -111,7 +111,8 @@ class _CreditUsageScreenState extends State<CreditUsageScreen> {
             const SizedBox(height: 12),
             _chartCard(
               title: 'AI model distribution',
-              subtitle: 'Searches segmented across GPT, Gemini, Grok, Claude, and QSE',
+              subtitle:
+                  'Searches segmented across GPT, Gemini, Grok, Claude, and QSE',
               child: Column(
                 children: [
                   SizedBox(
@@ -123,17 +124,17 @@ class _CreditUsageScreenState extends State<CreditUsageScreen> {
                         sections: _modelUsage
                             .map(
                               (item) => PieChartSectionData(
-                            color: item.color,
-                            value: item.value.toDouble(),
-                            radius: 58,
-                            title: '${item.value}',
-                            titleStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
+                                color: item.color,
+                                value: item.value.toDouble(),
+                                radius: 58,
+                                title: '${item.value}',
+                                titleStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
                             .toList(),
                       ),
                     ),
@@ -176,10 +177,10 @@ class _CreditUsageScreenState extends State<CreditUsageScreen> {
                       border: Border.all(color: Colors.white10),
                     ),
                     titlesData: FlTitlesData(
-                      topTitles: const AxisTitles(
+                      topTitles: AxisTitles(
                         sideTitles: SideTitles(showTitles: false),
                       ),
-                      rightTitles: const AxisTitles(
+                      rightTitles: AxisTitles(
                         sideTitles: SideTitles(showTitles: false),
                       ),
                       leftTitles: AxisTitles(
@@ -224,7 +225,7 @@ class _CreditUsageScreenState extends State<CreditUsageScreen> {
                       LineChartBarData(
                         spots: List.generate(
                           _weeklySearches.length,
-                              (index) => FlSpot(
+                          (index) => FlSpot(
                             index.toDouble(),
                             _weeklySearches[index],
                           ),
@@ -281,10 +282,10 @@ class _CreditUsageScreenState extends State<CreditUsageScreen> {
                       border: Border.all(color: Colors.white10),
                     ),
                     titlesData: FlTitlesData(
-                      topTitles: const AxisTitles(
+                      topTitles: AxisTitles(
                         sideTitles: SideTitles(showTitles: false),
                       ),
-                      rightTitles: const AxisTitles(
+                      rightTitles: AxisTitles(
                         sideTitles: SideTitles(showTitles: false),
                       ),
                       leftTitles: AxisTitles(
@@ -351,10 +352,10 @@ class _CreditUsageScreenState extends State<CreditUsageScreen> {
                 children: _creditBreakdown
                     .map(
                       (item) => Padding(
-                    padding: const EdgeInsets.only(bottom: 14),
-                    child: _breakdownTile(item),
-                  ),
-                )
+                        padding: const EdgeInsets.only(bottom: 14),
+                        child: _breakdownTile(item),
+                      ),
+                    )
                     .toList(),
               ),
             ),

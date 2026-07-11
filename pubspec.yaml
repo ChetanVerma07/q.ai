@@ -1,0 +1,26 @@
+name: q_ai
+description: A Flutter application for q.ai.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.4.0
+  dio: ^5.0.7
+  google_fonts: ^8.1.0
+  flutter_markdown: ^0.7.7+1
+  fl_chart: ^0.60.0
+  image_picker: ^0.8.7+5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
